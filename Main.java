@@ -125,14 +125,22 @@ public class Main {
     public static void ImpressaoTexto() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImpressaoTexto("Teste de impressao", 1, 4, 0);
-            System.out.println("ImpressaoTexto" + retorno);
+            if (retorno == 0) {
+                System.out.println("Impressão concluida com sucesso.");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void ImpressaoQRCode() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImpressaoQRCode("Teste de impressao", 6, 4);
-            System.out.println("ImpressaoQRCode" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
 
     }
@@ -140,48 +148,77 @@ public class Main {
     public static void ImpressaoCodigoBarras() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImpressaoCodigoBarras(8, "{A012345678912", 100, 2, 3);
-            System.out.println("ImpressaoCodigoBarras" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void AvancaPapel() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AvancaPapel(2);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void AbreGavetaElgin() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AbreGavetaElgin();
-            System.out.println("AbreGavetaElgin" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void AbreGaveta() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AbreGaveta(1, 5, 10);
-            System.out.println("AbreGaveta" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void SinalSonoro() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.SinalSonoro(4, 5, 5);
-            System.out.println("SinalSonoro: " + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void ImprimeXMLSAT() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLSAT("path=C:\\Users\\cleiton_vale\\Downloads\\Java-Aluno Graduacao\\Java-Aluno Graduacao\\XMLSAT.xml", 0);
-            System.out.println("ImprimeXMLSAT" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
     public static void ImprimeXMLCancelamentoSAT() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLCancelamentoSAT("path=C:\\Users\\cleiton_vale\\Downloads\\Java-Aluno Graduacao\\Java-Aluno Graduacao\\CANC_SAT.xml", "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==", 0);
-            System.out.println("ImprimeXMLCancelamentoSAT" + retorno);
+            if (retorno == 0) {
+                System.out.println("Sucesso!");
+            } else {
+                System.out.println("ERRO" + retorno);
+            }
         }
     }
 
@@ -258,6 +295,7 @@ public class Main {
                     break;
 
                 default:
+                    System.out.println("Opção invalida");
 
             }
         }

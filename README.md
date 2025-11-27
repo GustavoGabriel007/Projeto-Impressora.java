@@ -114,6 +114,10 @@ Impressora compatível conectada via USB/Serial/TCP
 
 ▶️ Como Executar
 
+Baixe a pasta "Java-Aluno Graduacao"
+
+Substitua o arquivo "Main.java" da pasta pelo "Main.java" anexado aqui no GitHub
+
 Abra o projeto em uma IDE (NetBeans, IntelliJ, Eclipse) ou terminal.
 
 Certifique-se de que a DLL está no caminho correto.

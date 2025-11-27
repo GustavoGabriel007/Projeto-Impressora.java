@@ -1,144 +1,81 @@
-# IMPRESSORA-TRABALHO
-📌 Objetivo do Projeto
+# 🖨️ Integração Java com Impressora Elgin i9
+### *Leões do Whatsapp*
+---
 
-O objetivo deste trabalho é apresentar um sistema Java capaz de se comunicar com uma impressora fiscal/termal através de uma DLL nativa, utilizando JNA.
-Por meio de um menu interativo no console, o usuário pode realizar diversas operações de impressão e controle da impressora.
+## 📘 Sobre o Projeto
 
-🛠️ Tecnologias Utilizadas
+Este projeto foi desenvolvido por alunos com o objetivo de criar uma aplicação Java capaz de se comunicar com a impressora **Elgin i9**, utilizando comandos **ESC/POS**, testes de impressão e interação via porta de comunicação.  
+O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
-Java 8+
+---
 
-DLL da Impressora Elgin (E1_Impressora01.dll)
+## 🧰 Tecnologias Utilizadas
 
-Scanner (entrada via console)
+- **Java 17**
+- **IntelliJ IDEA**
+- **Biblioteca ESC/POS**
+- **Driver/SDK da Elgin i9**
+- *(Opcional)* Maven ou Gradle
 
-📚 Descrição do Funcionamento
+---
 
-O sistema se baseia nos seguintes componentes:
+## 📁 Estrutura do Projeto
 
-✔️ 1. Interface ImpressoraDLL
+/src → Código-fonte principal
+/lib → Bibliotecas e dependências externas
+/docs → Materiais adicionais e documentação
+/examples → Testes e arquivos de demonstração
 
-Define os métodos presentes na DLL nativa, permitindo que o Java faça chamadas diretas para:
 
-Abrir e fechar conexão
+---
 
-Imprimir texto
+## ⚙️ Instalação e Execução
 
-Imprimir QRCode
+### 🔽 1. Baixar o Projeto do GitHub
+1. Acesse o repositório.
+2. Clique no botão **Code**.
+3. Selecione **Download ZIP**.
+4. Aguarde o download.
 
-Imprimir código de barras
+### 📦 2. Extrair o Arquivo ZIP
+1. Vá até o local onde o arquivo foi salvo.
+2. Clique com o botão direito → **Extrair aqui** / **Extract All**.
+3. Será criada uma nova pasta com os arquivos.
 
-Imprimir XML SAT e cancelamento SAT
+### 🧭 3. Importar no IntelliJ IDEA
+1. Abra o **IntelliJ IDEA**.
+2. Clique em **Open**.
+3. Escolha a pasta extraída.
+4. Aguarde o carregamento.
+5. Caso apareça, clique em **Import Project** (Maven/Gradle).
+6. Verifique o SDK em:
+   - *File → Project Structure → Project SDK → Java 17*
+7. Abra o arquivo `Main.java` e clique em ▶️ **Run**.
 
-Emitir som
+---
 
-Abrir gaveta (Elgin e customizada)
+## 🧪 Testes
 
-Avançar papel
+- Teste de conexão com a impressora
+- Impressão de texto simples
+- Envio de comandos **ESC/POS**
+- Verificação das portas de comunicação
+- Teste com várias mensagens
 
-Realizar corte
+---
 
-Verificar status
+## 📚 Documentação Adicional
 
-✔️ 2. Menu Interativo
+- Manual da Impressora **Elgin i9**
+- Documentação do **SDK Elgin**
+- Referência **ESC/POS**
 
-O programa apresenta um menu onde o usuário escolhe a ação desejada:
+---
 
-1 - Configurar Conexão
-2 - Abrir Conexão
-3 - Impressão Texto
-4 - Impressão QRCode
-5 - Impressão Código de Barras
-6 - Impressão XML SAT
-7 - Impressão XML Cancelamento SAT
-8 - Abrir Gaveta Elgin
-9 - Abrir Gaveta
-10 - Sinal Sonoro
-0 - Fechar Conexão e Sair
+## 👥 Autores  
+*(em ordem alfabética)*
 
-
-Cada opção executa a função correspondente da DLL.
-
-🔌 Configuração da Conexão
-
-A opção 1 - Configurar Conexão solicita:
-
-Tipo (USB, Serial... via número)
-
-Modelo da impressora (ex.: i7, i8, i9)
-
-Tipo de conexão (“USB”, “TCP”...)
-
-Esses dados são usados pela chamada:
-
-AbreConexaoImpressora(tipo, modelo, conexao, parametro);
-
-🖨️ Funcionalidades Disponíveis
-📝 Impressão de Texto
-ImpressaoTexto("Teste de impressao", 1, 4, 0);
-
-🔳 Impressão de QRCode
-ImpressaoQRCode("Teste de impressao", 6, 4);
-
-🏷️ Impressão de Código de Barras
-ImpressaoCodigoBarras(8, "{A012345678912", 100, 2, 3);
-
-📄 Impressão de XML SAT
-
-Lê arquivos XML no caminho especificado e envia para impressão.
-
-❌ Impressão de XML Cancelamento SAT
-
-Idêntico ao anterior, porém com assinatura QRCode adicional.
-
-🔔 Sinal Sonoro
-SinalSonoro(4, 5, 5);
-
-🗄️ Abrir Gaveta
-
-Elgin nativa
-
-ou modo customizado via parâmetros
-
-📄 Avançar papel e corte
-
-Usado automaticamente após impressão.
-
-📥 Requisitos para Execução
-
-Java 8 ou superior instalado
-
-DLL E1_Impressora01.dll no caminho configurado no código
-
-Impressora compatível conectada via USB/Serial/TCP
-
-▶️ Como Executar
-
-Baixe a pasta "Java-Aluno Graduacao"
-
-Substitua o arquivo "Main.java" da pasta pelo "Main.java" anexado aqui no GitHub
-
-Abra o projeto em uma IDE (NetBeans, IntelliJ, Eclipse) ou terminal.
-
-Certifique-se de que a DLL está no caminho correto.
-
-Compile e execute o arquivo Main.java.
-
-O menu será exibido no console.
-
-Escolha uma das opções para interagir com a impressora.
-
-📝 Observações Importantes
-
-É necessário ajustar o caminho da DLL caso o projeto seja movido de pasta.
-
-Como é integração nativa, o programa funciona apenas em Windows.
-
-Se a impressora não estiver conectada ou configurada corretamente, os comandos podem retornar códigos de erro.
-
-
-👨‍🏫 Autor
-
-Projeto desenvolvido como parte de um projeto de faculdade
-
-Autores: Kauã Geovany, Cleiton Dias, Gustavo Gabriel e Guilherme Matias
+- Cleiton Dias
+- Guilherme Matias
+- Gustavo Gabriel
+- Kauã Geovany

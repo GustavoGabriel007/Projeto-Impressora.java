@@ -16,7 +16,7 @@ public class Main {
 
         // Caminho completo para a DLL
         ImpressoraDLL INSTANCE = (ImpressoraDLL) Native.load(
-                "C:\\Users\\cleiton_vale\\Downloads\\Java-Aluno Graduacao\\Java-Aluno Graduacao\\E1_Impressora01.dll",
+                "./E1_Impressora01.dll",
                 ImpressoraDLL.class
         );
 
@@ -131,6 +131,9 @@ public class Main {
                 System.out.println("ERRO" + retorno);
             }
         }
+        else{
+            System.out.println("Abra a conexao primeiro");
+        }
     }
 
     public static void ImpressaoQRCode() {
@@ -141,8 +144,11 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
-        }
 
+        } else {
+            System.out.println("Abra a conexao primeiro");
+
+        }
     }
 
     public static void ImpressaoCodigoBarras() {
@@ -153,9 +159,10 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
-
     public static void AvancaPapel() {
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AvancaPapel(2);
@@ -164,6 +171,8 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
@@ -175,6 +184,8 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
@@ -186,6 +197,8 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
@@ -197,28 +210,34 @@ public class Main {
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
     public static void ImprimeXMLSAT() {
         if (conexaoAberta) {
-            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLSAT("path=C:\\Users\\cleiton_vale\\Downloads\\Java-Aluno Graduacao\\Java-Aluno Graduacao\\XMLSAT.xml", 0);
+            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLSAT("./XMLSAT.xml", 0);
             if (retorno == 0) {
                 System.out.println("Sucesso!");
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
     public static void ImprimeXMLCancelamentoSAT() {
         if (conexaoAberta) {
-            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLCancelamentoSAT("path=C:\\Users\\cleiton_vale\\Downloads\\Java-Aluno Graduacao\\Java-Aluno Graduacao\\CANC_SAT.xml", "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==", 0);
+            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLCancelamentoSAT("./CANC_SAT.xml", "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==", 0);
             if (retorno == 0) {
                 System.out.println("Sucesso!");
             } else {
                 System.out.println("ERRO" + retorno);
             }
+        } else {
+            System.out.println("Abra a conexao primeiro");
         }
     }
 
@@ -245,6 +264,7 @@ public class Main {
 
             if (escolha.equals("0")) {
                 fecharConexao();
+                break;
             }
 
             switch (escolha) {

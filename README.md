@@ -1,15 +1,15 @@
-# 🖨️ Integração Java com Impressora Elgin i9
+# Integração Java com Impressora Elgin i9
 ### *Leões do Whatsapp*
 ---
 
-## 📘 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido por alunos com o objetivo de criar uma aplicação Java capaz de se comunicar com a impressora **Elgin i9**, utilizando comandos **ESC/POS**, testes de impressão e interação via porta de comunicação.  
 O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Java 17**
 - **IntelliJ IDEA**
@@ -19,7 +19,7 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 /src → Código-fonte principal
 /lib → Bibliotecas e dependências externas
@@ -29,20 +29,20 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## ⚙️ Instalação e Execução
+## Instalação e Execução
 
-### 🔽 1. Baixar o Projeto do GitHub
+### 1. Baixar o Projeto do GitHub
 1. Acesse o repositório.
 2. Clique no botão **Code**.
 3. Selecione **Download ZIP**.
 4. Aguarde o download.
 
-### 📦 2. Extrair o Arquivo ZIP
+### 2. Extrair o Arquivo ZIP
 1. Vá até o local onde o arquivo foi salvo.
 2. Clique com o botão direito → **Extrair aqui** / **Extract All**.
 3. Será criada uma nova pasta com os arquivos.
 
-### 🧭 3. Importar no IntelliJ IDEA
+### 3. Importar no IntelliJ IDEA
 1. Abra o **IntelliJ IDEA**.
 2. Clique em **Open**.
 3. Escolha a pasta extraída.
@@ -54,7 +54,7 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## 🧪 Testes
+## Testes
 
 - Teste de conexão com a impressora
 - Impressão de texto simples
@@ -64,7 +64,7 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## 📚 Documentação Adicional
+## Documentação Adicional
 
 - Manual da Impressora **Elgin i9**
 - Documentação do **SDK Elgin**
@@ -72,7 +72,7 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ---
 
-## 👥 Autores  
+## Autores  
 *(em ordem alfabética)*
 
 - Cleiton Dias

@@ -1,5 +1,5 @@
 # Integração Java com Impressora Elgin i9
-### *Leões do Whatsapp*
+### *Turma ADS B*
 ---
 
 ## Sobre o Projeto
